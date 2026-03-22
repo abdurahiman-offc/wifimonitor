@@ -82,6 +82,27 @@ You've successfully run and modified your React Native App. :partying_face:
 - If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
 - If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
 
+## 🚀 Building the App
+
+### Option 1: Cloud Build (Recommended)
+If you don't have Android Studio installed, you can use the built-in GitHub Actions workflow:
+1. Push this project to a **GitHub repository**.
+2. Navigate to the **Actions** tab on GitHub.
+3. Select the **Build Android APK** workflow and run it (or it will trigger automatically on push).
+4. Once completed, download the **app-debug** artifact to get your APK.
+
+### Option 2: Local Build
+If you have a local Android development environment:
+1. `npm install --legacy-peer-deps`
+2. `cd android && ./gradlew assembleDebug`
+3. APK path: `android/app/build/outputs/apk/debug/app-debug.apk`
+
+## 🛠 Tech Stack
+- **React Native (TypeScript)**
+- **SQLite**: Local device database
+- **Zustand**: State management
+- **GitHub Actions**: Cloud CI/CD
+
 # Troubleshooting
 
 If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
